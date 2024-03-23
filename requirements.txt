@@ -1,0 +1,6 @@
+#forex-python
+#plotify
+numpy
+pydantic
+rich
+yfinance
