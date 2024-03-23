@@ -52,7 +52,7 @@ class PortfolioPerformance:
         }
 
         self.style_red = Style(color="rgb(255,100,100)")
-        self.style_blue = Style(color="Blue")
+        self.style_blue = Style(color="cyan")
 
         self.table = Table()
         self.print_header()
@@ -206,7 +206,8 @@ class PortfolioPerformance:
                 self.add_stock(stock, earnings)
                 self.investments[country].add(stock, earnings)
 
-            self.print_investment(self.investments[country])
+            if country_stock:
+                self.print_investment(self.investments[country])
 
     def print(self) -> None:
         console = Console()

@@ -1,0 +1,28 @@
+{
+    "ticker": {
+            "Apple": "AAPL",
+            "Microsoft": "MSFT"
+    },
+    "stocks": [
+        {
+            "name": "Microsoft",
+            "purchase_price": 200.00,
+            "amount": 100
+        },
+        {
+            "name": "Apple",
+            "purchase_price": 180.00,
+            "amount": 100
+        },
+        {
+            "name": "Apple",
+            "purchase_price": 100.5400,
+            "amount": 20
+        },
+        {
+            "name": "Microsoft",
+            "purchase_price": 430.00,
+            "amount": 140
+        }
+    ]
+}
