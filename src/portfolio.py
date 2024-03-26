@@ -25,6 +25,11 @@ class InvestmentPerformance:
         self.profit_loss = 0
         self.exchange_rate = exchange_rate
 
+    def reset(self):
+        self.total_cost = 0
+        self.total_value = 0
+        self.profit_loss = 0
+
     def add(self, stock: Stock, earnings: float | int) -> None:
         """Add to a investment
 
@@ -56,6 +61,10 @@ class PortfolioPerformance:
 
         self.table = Table()
         self.print_header()
+
+    def reset(self):
+        for investment in self.investments.values():
+            investment.reset()
 
     def print_header(self) -> None:
         self.table.add_column("name", justify="left")
@@ -197,6 +206,7 @@ class PortfolioPerformance:
             stocks (List): stocks to process
         """
 
+        self.reset()
         stock_per_country = self.split_stock_by_country(stocks)
 
         for country, country_stock in stock_per_country.items():
